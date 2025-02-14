@@ -13,7 +13,7 @@ DADO QUE CONSULTE O ENDPOINT /api/users
 
 QUANDO EU PASSAR O PARAMETRO PAGE=1 
     ${headers}    Create Dictionary    content-type=application/json
-    ${resposta}    GET On Session    reqres     /api/users        expected_status=any
+    ${resposta}    GET On Session    reqres     /api/users  params=page=1        expected_status=any
     Log    ${resposta.text}
     Set Suite Variable    ${resposta}
 
@@ -33,4 +33,15 @@ ENTÃO VALIDO O CONTEUDO DO RESPONSE BODY
                 
     END
         
-   
+QUANDO EU NÃO PASSAR O PARAMETRO PAGE
+    ${headers}    Create Dictionary    content-type=application/json
+    ${resposta}    GET On Session    reqres     /api/users      expected_status=any
+    Log    ${resposta.text}
+    Set Suite Variable    ${resposta}
+
+
+QUANDO EU NÃO PASSAR O PARAMETRO PAGE=3
+     ${headers}    Create Dictionary    content-type=application/json
+    ${resposta}    GET On Session    reqres     /api/users  params=page=3       expected_status=any
+    Log    ${resposta.text}
+    Set Suite Variable    ${resposta}
