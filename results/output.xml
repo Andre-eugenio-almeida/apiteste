@@ -1,89 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-02-13T22:55:37.075534" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-02-17T23:12:44.513320" rpa="false" schemaversion="5">
 <suite id="s1" name="testApi reqres" source="C:\repositorio\apiteste\tests\testApi_reqres.robot">
 <test id="s1-t1" name="CONSULTAR USUARIOS COM SUCESSO" line="8">
 <kw name="DADO QUE CONSULTE O ENDPOINT /api/users" owner="api_reqres">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-02-13T22:55:37.838472" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-02-17T23:12:45.125608" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>reqres</arg>
 <arg>${url_reqres}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-02-13T22:55:37.838132" elapsed="0.000671"/>
+<status status="PASS" start="2025-02-17T23:12:45.125256" elapsed="0.000666"/>
 </kw>
-<status status="PASS" start="2025-02-13T22:55:37.836886" elapsed="0.002079"/>
+<status status="PASS" start="2025-02-17T23:12:45.124063" elapsed="0.002021"/>
 </kw>
 <kw name="QUANDO EU PASSAR O PARAMETRO PAGE=1" owner="api_reqres">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-02-13T22:55:37.840242" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<msg time="2025-02-17T23:12:45.127365" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
 <var>${headers}</var>
 <arg>content-type=application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-02-13T22:55:37.839846" elapsed="0.000445"/>
+<status status="PASS" start="2025-02-17T23:12:45.126956" elapsed="0.000458"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-02-13T22:55:38.741989" level="INFO">GET Request : url=https://reqres.in/api/users?page=1 
+<msg time="2025-02-17T23:12:45.947309" level="INFO">GET Request : url=https://reqres.in/api/users?page=1 
  path_url=/api/users?page=1 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-02-13T22:55:38.742224" level="INFO">GET Response : url=https://reqres.in/api/users?page=1 
+<msg time="2025-02-17T23:12:45.948202" level="INFO">GET Response : url=https://reqres.in/api/users?page=1 
  status=200, reason=OK 
- headers={'Date': 'Fri, 14 Feb 2025 01:55:38 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738963375&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=nhQykK4UVk9azVVuGB%2FboIo%2BNhIR91sJOVwyuj%2B8QgY%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1738963375&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=nhQykK4UVk9azVVuGB%2FboIo%2BNhIR91sJOVwyuj%2B8QgY%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"41e-bY3U72nulxuwNd/TmihMEHjLmek"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'REVALIDATED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '91196fe36c1b275b-FOR', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=57040&amp;min_rtt=55124&amp;rtt_var=18831&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2836&amp;recv_bytes=775&amp;delivery_rate=64378&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=a1ee0153538a8dfe&amp;ts=721&amp;x=0"'} 
+ headers={'Date': 'Tue, 18 Feb 2025 02:12:46 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739844766&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=zwmpteoaURYnt5X7pDxPuALM%2Fhts54qBHBi8ZduRnfc%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1739844766&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=zwmpteoaURYnt5X7pDxPuALM%2Fhts54qBHBi8ZduRnfc%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"41e-bY3U72nulxuwNd/TmihMEHjLmek"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'MISS', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '913a7e78d87cf62e-FOR', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=56882&amp;min_rtt=56858&amp;rtt_var=21370&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2834&amp;recv_bytes=775&amp;delivery_rate=71511&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=a6d2218f190a2a38&amp;ts=638&amp;x=0"'} 
  body={"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
  </msg>
-<msg time="2025-02-13T22:55:38.742373" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-02-17T23:12:45.948848" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-02-13T22:55:38.743575" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<msg time="2025-02-17T23:12:45.952561" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
 <var>${resposta}</var>
 <arg>reqres</arg>
 <arg>/api/users</arg>
 <arg>params=page=1</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-02-13T22:55:37.840501" elapsed="0.903133"/>
+<status status="PASS" start="2025-02-17T23:12:45.127593" elapsed="0.825265"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-02-13T22:55:38.744812" level="INFO">{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}</msg>
+<msg time="2025-02-17T23:12:45.955352" level="INFO">{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}</msg>
 <arg>${resposta.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.743899" elapsed="0.001007"/>
+<status status="PASS" start="2025-02-17T23:12:45.953472" elapsed="0.002124"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-02-13T22:55:38.745445" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<msg time="2025-02-17T23:12:45.957249" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
 <arg>${resposta}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.745110" elapsed="0.000405"/>
+<status status="PASS" start="2025-02-17T23:12:45.956317" elapsed="0.001150"/>
 </kw>
-<status status="PASS" start="2025-02-13T22:55:37.839427" elapsed="0.906185"/>
+<status status="PASS" start="2025-02-17T23:12:45.126546" elapsed="0.831361"/>
 </kw>
-<kw name="ENTÃO A API DEVE RETORNAR 200 SUCESSO" owner="api_reqres">
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_reqres">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-02-13T22:55:38.747404" level="INFO">Argument types are:
+<msg time="2025-02-17T23:12:45.962210" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${resposta.status_code}</arg>
 <arg>${status_code_desejado}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.746597" elapsed="0.000886"/>
+<status status="PASS" start="2025-02-17T23:12:45.959653" elapsed="0.002831"/>
 </kw>
 <arg>200</arg>
-<status status="PASS" start="2025-02-13T22:55:38.746091" elapsed="0.001488"/>
+<status status="PASS" start="2025-02-17T23:12:45.958653" elapsed="0.004112"/>
 </kw>
 <kw name="ENTÃO VALIDO O CONTEUDO DO RESPONSE BODY" owner="api_reqres">
 <kw name="Convert String To Json" owner="JSONLibrary">
-<msg time="2025-02-13T22:55:38.749164" level="INFO">${Json_response} = {'page': 1, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 1, 'email': 'george.bluth@reqres.in', 'first_name': 'George', 'last_name': 'Bluth', 'avatar': 'https://reqres.in/img/faces/1-i...</msg>
+<msg time="2025-02-17T23:12:45.967840" level="INFO">${Json_response} = {'page': 1, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 1, 'email': 'george.bluth@reqres.in', 'first_name': 'George', 'last_name': 'Bluth', 'avatar': 'https://reqres.in/img/faces/1-i...</msg>
 <var>${Json_response}</var>
 <arg>${resposta.text}</arg>
 <doc>Convert String to JSON object</doc>
-<status status="PASS" start="2025-02-13T22:55:38.748425" elapsed="0.000781"/>
+<status status="PASS" start="2025-02-17T23:12:45.964882" elapsed="0.003124"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-02-13T22:55:38.749648" level="INFO">${data_list} = [{'id': 1, 'email': 'george.bluth@reqres.in', 'first_name': 'George', 'last_name': 'Bluth', 'avatar': 'https://reqres.in/img/faces/1-image.jpg'}, {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_na...</msg>
+<msg time="2025-02-17T23:12:45.969635" level="INFO">${data_list} = [{'id': 1, 'email': 'george.bluth@reqres.in', 'first_name': 'George', 'last_name': 'Bluth', 'avatar': 'https://reqres.in/img/faces/1-image.jpg'}, {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_na...</msg>
 <var>${data_list}</var>
 <arg>${Json_response}</arg>
 <arg>data</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.749402" elapsed="0.000710"/>
+<status status="PASS" start="2025-02-17T23:12:45.968576" elapsed="0.001641"/>
 </kw>
 <for flavor="IN">
 <iter>
@@ -91,364 +91,1054 @@
 <arg>${item}</arg>
 <arg>id</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.750624" elapsed="0.000250"/>
+<status status="PASS" start="2025-02-17T23:12:45.971469" elapsed="0.000437"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>email</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.751025" elapsed="0.000223"/>
+<status status="PASS" start="2025-02-17T23:12:45.972245" elapsed="0.000365"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>first_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.751423" elapsed="0.000179"/>
+<status status="PASS" start="2025-02-17T23:12:45.972888" elapsed="0.000366"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>last_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.751787" elapsed="0.000292"/>
+<status status="PASS" start="2025-02-17T23:12:45.973531" elapsed="0.000338"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>avatar</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.752353" elapsed="0.000251"/>
+<status status="PASS" start="2025-02-17T23:12:45.974167" elapsed="0.000342"/>
 </kw>
 <var name="${item}">{'id': 1, 'email': 'george.bluth@reqres.in', 'first_name': 'George', 'last_name': 'Bluth', 'avatar': 'https://reqres.in/img/faces/1-image.jpg'}</var>
-<status status="PASS" start="2025-02-13T22:55:38.750498" elapsed="0.002178"/>
+<status status="PASS" start="2025-02-17T23:12:45.971190" elapsed="0.003435"/>
 </iter>
 <iter>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>id</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.753012" elapsed="0.000210"/>
+<status status="PASS" start="2025-02-17T23:12:45.975198" elapsed="0.000351"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>email</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.753406" elapsed="0.000203"/>
+<status status="PASS" start="2025-02-17T23:12:45.975836" elapsed="0.001174"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>first_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.753769" elapsed="0.000193"/>
+<status status="PASS" start="2025-02-17T23:12:45.978041" elapsed="0.000995"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>last_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.754104" elapsed="0.000181"/>
+<status status="PASS" start="2025-02-17T23:12:45.979682" elapsed="0.001054"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>avatar</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.754425" elapsed="0.000178"/>
+<status status="PASS" start="2025-02-17T23:12:45.981340" elapsed="0.000942"/>
 </kw>
 <var name="${item}">{'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}</var>
-<status status="PASS" start="2025-02-13T22:55:38.752885" elapsed="0.001778"/>
+<status status="PASS" start="2025-02-17T23:12:45.974989" elapsed="0.007543"/>
 </iter>
 <iter>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>id</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.754922" elapsed="0.000178"/>
+<status status="PASS" start="2025-02-17T23:12:45.983623" elapsed="0.000498"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>email</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.755263" elapsed="0.000191"/>
+<status status="PASS" start="2025-02-17T23:12:45.984350" elapsed="0.000189"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>first_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.755592" elapsed="0.000172"/>
+<status status="PASS" start="2025-02-17T23:12:45.984680" elapsed="0.000176"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>last_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.755935" elapsed="0.000273"/>
+<status status="PASS" start="2025-02-17T23:12:45.985032" elapsed="0.000176"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>avatar</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.756384" elapsed="0.000203"/>
+<status status="PASS" start="2025-02-17T23:12:45.985349" elapsed="0.000176"/>
 </kw>
 <var name="${item}">{'id': 3, 'email': 'emma.wong@reqres.in', 'first_name': 'Emma', 'last_name': 'Wong', 'avatar': 'https://reqres.in/img/faces/3-image.jpg'}</var>
-<status status="PASS" start="2025-02-13T22:55:38.754820" elapsed="0.001834"/>
+<status status="PASS" start="2025-02-17T23:12:45.983199" elapsed="0.002386"/>
 </iter>
 <iter>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>id</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.756938" elapsed="0.000205"/>
+<status status="PASS" start="2025-02-17T23:12:45.985850" elapsed="0.000215"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>email</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.757329" elapsed="0.000197"/>
+<status status="PASS" start="2025-02-17T23:12:45.986208" elapsed="0.000172"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>first_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.757697" elapsed="0.000172"/>
+<status status="PASS" start="2025-02-17T23:12:45.986519" elapsed="0.000177"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>last_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.758006" elapsed="0.000170"/>
+<status status="PASS" start="2025-02-17T23:12:45.986834" elapsed="0.000203"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>avatar</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.758327" elapsed="0.000249"/>
+<status status="PASS" start="2025-02-17T23:12:45.987202" elapsed="0.000192"/>
 </kw>
 <var name="${item}">{'id': 4, 'email': 'eve.holt@reqres.in', 'first_name': 'Eve', 'last_name': 'Holt', 'avatar': 'https://reqres.in/img/faces/4-image.jpg'}</var>
-<status status="PASS" start="2025-02-13T22:55:38.756826" elapsed="0.001810"/>
+<status status="PASS" start="2025-02-17T23:12:45.985751" elapsed="0.001715"/>
 </iter>
 <iter>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>id</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.758899" elapsed="0.000180"/>
+<status status="PASS" start="2025-02-17T23:12:45.987747" elapsed="0.000205"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>email</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.759219" elapsed="0.000488"/>
+<status status="PASS" start="2025-02-17T23:12:45.988122" elapsed="0.000183"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>first_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.760064" elapsed="0.000421"/>
+<status status="PASS" start="2025-02-17T23:12:45.988475" elapsed="0.000177"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>last_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.760758" elapsed="0.000414"/>
+<status status="PASS" start="2025-02-17T23:12:45.988789" elapsed="0.000194"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>avatar</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.761408" elapsed="0.000261"/>
+<status status="PASS" start="2025-02-17T23:12:45.989148" elapsed="0.000245"/>
 </kw>
 <var name="${item}">{'id': 5, 'email': 'charles.morris@reqres.in', 'first_name': 'Charles', 'last_name': 'Morris', 'avatar': 'https://reqres.in/img/faces/5-image.jpg'}</var>
-<status status="PASS" start="2025-02-13T22:55:38.758791" elapsed="0.002984"/>
+<status status="PASS" start="2025-02-17T23:12:45.987636" elapsed="0.001841"/>
 </iter>
 <iter>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>id</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.762359" elapsed="0.000377"/>
+<status status="PASS" start="2025-02-17T23:12:45.989894" elapsed="0.000747"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>email</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.763120" elapsed="0.000650"/>
+<status status="PASS" start="2025-02-17T23:12:45.990824" elapsed="0.000359"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>first_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.764075" elapsed="0.000336"/>
+<status status="PASS" start="2025-02-17T23:12:45.991352" elapsed="0.000201"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>last_name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.764651" elapsed="0.000267"/>
+<status status="PASS" start="2025-02-17T23:12:45.991712" elapsed="0.000195"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${item}</arg>
 <arg>avatar</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.765137" elapsed="0.000304"/>
+<status status="PASS" start="2025-02-17T23:12:45.992078" elapsed="0.000195"/>
 </kw>
 <var name="${item}">{'id': 6, 'email': 'tracey.ramos@reqres.in', 'first_name': 'Tracey', 'last_name': 'Ramos', 'avatar': 'https://reqres.in/img/faces/6-image.jpg'}</var>
-<status status="PASS" start="2025-02-13T22:55:38.762137" elapsed="0.003409"/>
+<status status="PASS" start="2025-02-17T23:12:45.989759" elapsed="0.002581"/>
 </iter>
 <var>${item}</var>
 <value>@{data_list}</value>
-<status status="PASS" start="2025-02-13T22:55:38.750238" elapsed="0.015400"/>
+<status status="PASS" start="2025-02-17T23:12:45.970595" elapsed="0.021804"/>
 </for>
-<status status="PASS" start="2025-02-13T22:55:38.748090" elapsed="0.017712"/>
+<status status="PASS" start="2025-02-17T23:12:45.963898" elapsed="0.028602"/>
 </kw>
-<status status="PASS" start="2025-02-13T22:55:37.835650" elapsed="0.930652"/>
+<status status="PASS" start="2025-02-17T23:12:45.122644" elapsed="0.870218"/>
 </test>
 <test id="s1-t2" name="CONSULTAR USUARIOS COM SUCESSO SEM PAGINAÇÃO" line="14">
 <kw name="DADO QUE CONSULTE O ENDPOINT /api/users" owner="api_reqres">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-02-13T22:55:38.771104" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-02-17T23:12:45.996091" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>reqres</arg>
 <arg>${url_reqres}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-02-13T22:55:38.770660" elapsed="0.000930"/>
+<status status="PASS" start="2025-02-17T23:12:45.995641" elapsed="0.000797"/>
 </kw>
-<status status="PASS" start="2025-02-13T22:55:38.768943" elapsed="0.002932"/>
+<status status="PASS" start="2025-02-17T23:12:45.994712" elapsed="0.001914"/>
 </kw>
 <kw name="QUANDO EU NÃO PASSAR O PARAMETRO PAGE" owner="api_reqres">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-02-13T22:55:38.773506" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<msg time="2025-02-17T23:12:45.998216" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
 <var>${headers}</var>
 <arg>content-type=application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.773124" elapsed="0.000455"/>
+<status status="PASS" start="2025-02-17T23:12:45.997749" elapsed="0.000542"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-02-13T22:55:39.549420" level="INFO">GET Request : url=https://reqres.in/api/users 
+<msg time="2025-02-17T23:12:46.698194" level="INFO">GET Request : url=https://reqres.in/api/users 
  path_url=/api/users 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-02-13T22:55:39.549610" level="INFO">GET Response : url=https://reqres.in/api/users 
+<msg time="2025-02-17T23:12:46.698578" level="INFO">GET Response : url=https://reqres.in/api/users 
  status=200, reason=OK 
- headers={'Date': 'Fri, 14 Feb 2025 01:55:39 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739498139&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=sbXImkIJh0pqGd%2BBEfWR1zCyWWPvF%2B4ME0eyj4Zcyls%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1739498139&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=sbXImkIJh0pqGd%2BBEfWR1zCyWWPvF%2B4ME0eyj4Zcyls%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"41e-bY3U72nulxuwNd/TmihMEHjLmek"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'MISS', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '91196fe96902f63f-FOR', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=66507&amp;min_rtt=65272&amp;rtt_var=20736&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2836&amp;recv_bytes=768&amp;delivery_rate=55249&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=00546987c3b35098&amp;ts=581&amp;x=0"'} 
+ headers={'Date': 'Tue, 18 Feb 2025 02:12:46 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739723832&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=xJDEA57yRfU5MsxDoDBsCTdw5UN2JRbYtMiBDbpme2c%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1739723832&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=xJDEA57yRfU5MsxDoDBsCTdw5UN2JRbYtMiBDbpme2c%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"41e-bY3U72nulxuwNd/TmihMEHjLmek"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'REVALIDATED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '913a7e7e2adef63f-FOR', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=59368&amp;min_rtt=57697&amp;rtt_var=22830&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2836&amp;recv_bytes=768&amp;delivery_rate=70714&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=45f262c4f3f505fe&amp;ts=533&amp;x=0"'} 
  body={"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
  </msg>
-<msg time="2025-02-13T22:55:39.549778" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-02-17T23:12:46.698926" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-02-13T22:55:39.551040" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<msg time="2025-02-17T23:12:46.702249" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
 <var>${resposta}</var>
 <arg>reqres</arg>
 <arg>/api/users</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-02-13T22:55:38.773817" elapsed="0.777345"/>
+<status status="PASS" start="2025-02-17T23:12:45.998598" elapsed="0.703885"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-02-13T22:55:39.552205" level="INFO">{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}</msg>
+<msg time="2025-02-17T23:12:46.706206" level="INFO">{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}</msg>
 <arg>${resposta.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-02-13T22:55:39.551444" elapsed="0.000842"/>
+<status status="PASS" start="2025-02-17T23:12:46.703380" elapsed="0.003099"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-02-13T22:55:39.552717" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<msg time="2025-02-17T23:12:46.708030" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
 <arg>${resposta}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-02-13T22:55:39.552451" elapsed="0.000321"/>
+<status status="PASS" start="2025-02-17T23:12:46.707074" elapsed="0.001272"/>
 </kw>
-<status status="PASS" start="2025-02-13T22:55:38.772573" elapsed="0.780286"/>
+<status status="PASS" start="2025-02-17T23:12:45.997159" elapsed="0.711695"/>
 </kw>
-<kw name="ENTÃO A API DEVE RETORNAR 200 SUCESSO" owner="api_reqres">
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_reqres">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-02-13T22:55:39.554995" level="INFO">Argument types are:
+<msg time="2025-02-17T23:12:46.715336" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${resposta.status_code}</arg>
 <arg>${status_code_desejado}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-02-13T22:55:39.554074" elapsed="0.001093"/>
+<status status="PASS" start="2025-02-17T23:12:46.712051" elapsed="0.003775"/>
 </kw>
 <arg>200</arg>
-<status status="PASS" start="2025-02-13T22:55:39.553322" elapsed="0.001970"/>
+<status status="PASS" start="2025-02-17T23:12:46.710272" elapsed="0.005909"/>
 </kw>
-<status status="PASS" start="2025-02-13T22:55:38.767744" elapsed="0.787925"/>
+<status status="PASS" start="2025-02-17T23:12:45.993859" elapsed="0.723387"/>
 </test>
 <test id="s1-t3" name="CONSULTAR USUARIOS COM SUCESSO COM PAGINAÇÃO SEM DATA" line="19">
 <kw name="DADO QUE CONSULTE O ENDPOINT /api/users" owner="api_reqres">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-02-13T22:55:39.559028" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-02-17T23:12:46.726083" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>reqres</arg>
 <arg>${url_reqres}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-02-13T22:55:39.558813" elapsed="0.000609"/>
+<status status="PASS" start="2025-02-17T23:12:46.725046" elapsed="0.003486"/>
 </kw>
-<status status="PASS" start="2025-02-13T22:55:39.558411" elapsed="0.001256"/>
+<status status="PASS" start="2025-02-17T23:12:46.723364" elapsed="0.005737"/>
 </kw>
 <kw name="QUANDO EU NÃO PASSAR O PARAMETRO PAGE=3" owner="api_reqres">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-02-13T22:55:39.560908" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<msg time="2025-02-17T23:12:46.735842" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
 <var>${headers}</var>
 <arg>content-type=application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-02-13T22:55:39.560642" elapsed="0.000312"/>
+<status status="PASS" start="2025-02-17T23:12:46.735065" elapsed="0.000882"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-02-13T22:55:40.404410" level="INFO">GET Request : url=https://reqres.in/api/users?page=3 
+<msg time="2025-02-17T23:12:47.442457" level="INFO">GET Request : url=https://reqres.in/api/users?page=3 
  path_url=/api/users?page=3 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-02-13T22:55:40.404531" level="INFO">GET Response : url=https://reqres.in/api/users?page=3 
+<msg time="2025-02-17T23:12:47.442644" level="INFO">GET Response : url=https://reqres.in/api/users?page=3 
  status=200, reason=OK 
- headers={'Date': 'Fri, 14 Feb 2025 01:55:40 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739498140&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=XkwKAIASLYkHUCsZJ7vUqJ79270iAnZ7Zqfy7yuUjyo%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1739498140&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=XkwKAIASLYkHUCsZJ7vUqJ79270iAnZ7Zqfy7yuUjyo%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"ff-aGm564oP8PdTTBt7Rr/9A79zt7Q"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'MISS', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '91196fee2b2f2737-FOR', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=60572&amp;min_rtt=59115&amp;rtt_var=19175&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2836&amp;recv_bytes=775&amp;delivery_rate=62146&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=d22990044c2abb37&amp;ts=667&amp;x=0"'} 
+ headers={'Date': 'Tue, 18 Feb 2025 02:12:47 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739844767&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=uH3EOEdy6ZjKFd2u74r6vClmiARFM4aoQx%2BqtLrOsI4%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1739844767&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=uH3EOEdy6ZjKFd2u74r6vClmiARFM4aoQx%2BqtLrOsI4%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"ff-aGm564oP8PdTTBt7Rr/9A79zt7Q"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'MISS', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '913a7e82cb4b2745-FOR', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=59976&amp;min_rtt=57369&amp;rtt_var=23376&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2834&amp;recv_bytes=775&amp;delivery_rate=71118&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=79d7e7d1808ddc32&amp;ts=529&amp;x=0"'} 
  body={"page":3,"per_page":6,"total":12,"total_pages":2,"data":[],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
  </msg>
-<msg time="2025-02-13T22:55:40.404629" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-02-17T23:12:47.442795" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-02-13T22:55:40.405857" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<msg time="2025-02-17T23:12:47.444440" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
 <var>${resposta}</var>
 <arg>reqres</arg>
 <arg>/api/users</arg>
 <arg>params=page=3</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-02-13T22:55:39.561136" elapsed="0.844777"/>
+<status status="PASS" start="2025-02-17T23:12:46.736223" elapsed="0.708299"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-02-13T22:55:40.407098" level="INFO">{"page":3,"per_page":6,"total":12,"total_pages":2,"data":[],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}</msg>
+<msg time="2025-02-17T23:12:47.445965" level="INFO">{"page":3,"per_page":6,"total":12,"total_pages":2,"data":[],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}</msg>
 <arg>${resposta.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-02-13T22:55:40.406160" elapsed="0.001060"/>
+<status status="PASS" start="2025-02-17T23:12:47.444858" elapsed="0.001222"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-02-13T22:55:40.407866" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<msg time="2025-02-17T23:12:47.446794" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
 <arg>${resposta}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-02-13T22:55:40.407516" elapsed="0.000420"/>
+<status status="PASS" start="2025-02-17T23:12:47.446364" elapsed="0.000523"/>
 </kw>
-<status status="PASS" start="2025-02-13T22:55:39.560242" elapsed="0.847797"/>
+<status status="PASS" start="2025-02-17T23:12:46.731628" elapsed="0.715402"/>
 </kw>
-<kw name="ENTÃO A API DEVE RETORNAR 200 SUCESSO" owner="api_reqres">
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_reqres">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-02-13T22:55:40.409532" level="INFO">Argument types are:
+<msg time="2025-02-17T23:12:47.449292" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${resposta.status_code}</arg>
 <arg>${status_code_desejado}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-02-13T22:55:40.408846" elapsed="0.000761"/>
+<status status="PASS" start="2025-02-17T23:12:47.448167" elapsed="0.001249"/>
 </kw>
 <arg>200</arg>
-<status status="PASS" start="2025-02-13T22:55:40.408468" elapsed="0.001229"/>
+<status status="PASS" start="2025-02-17T23:12:47.447594" elapsed="0.001982"/>
 </kw>
-<status status="PASS" start="2025-02-13T22:55:39.557101" elapsed="0.852939"/>
+<status status="PASS" start="2025-02-17T23:12:46.720695" elapsed="0.729378"/>
 </test>
-<status status="PASS" start="2025-02-13T22:55:37.077793" elapsed="3.334026"/>
+<test id="s1-t4" name="CONSULTAR USUARIOS COM SUCESSO" line="27">
+<kw name="DADO QUE CONSULTE UM SINGLE USER NO ENDPOINT /api/users" owner="api_reqres">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:47.455962" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>reqres</arg>
+<arg>${url_reqres}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-17T23:12:47.455467" elapsed="0.000966"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:47.454532" elapsed="0.002163"/>
+</kw>
+<kw name="QUANDO EU PASSAR O PARAMETRO ID=2" owner="api_reqres">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-17T23:12:47.458548" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-17T23:12:47.457958" elapsed="0.000694"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:47.690589" level="INFO">GET Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-02-17T23:12:47.690953" level="INFO">GET Response : url=https://reqres.in/api/users/2 
+ status=200, reason=OK 
+ headers={'Date': 'Tue, 18 Feb 2025 02:12:47 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738974603&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=OLBW8QVyKgpkdhoBDCL4sN12ZzrELpF2JrtriX6OjKw%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1738974603&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=OLBW8QVyKgpkdhoBDCL4sN12ZzrELpF2JrtriX6OjKw%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"152-ApQgGHL6RKwaebFlrPCYPBO1xHg"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '2374', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '913a7e8729172746-FOR', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=57636&amp;min_rtt=55216&amp;rtt_var=22434&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2836&amp;recv_bytes=770&amp;delivery_rate=73891&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=60cda17533dce108&amp;ts=90&amp;x=0"'} 
+ body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
+ </msg>
+<msg time="2025-02-17T23:12:47.691551" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-02-17T23:12:47.694730" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<var>${resposta}</var>
+<arg>reqres</arg>
+<arg>/api/users/2</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-17T23:12:47.458999" elapsed="0.235954"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-17T23:12:47.697802" level="INFO">{"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}</msg>
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-17T23:12:47.695658" elapsed="0.002377"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-17T23:12:47.699719" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-17T23:12:47.698632" elapsed="0.001300"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:47.457350" elapsed="0.242972"/>
+</kw>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_reqres">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-17T23:12:47.706403" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${resposta.status_code}</arg>
+<arg>${status_code_desejado}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-17T23:12:47.702882" elapsed="0.003946"/>
+</kw>
+<arg>200</arg>
+<status status="PASS" start="2025-02-17T23:12:47.701730" elapsed="0.005619"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:47.453177" elapsed="0.255509"/>
+</test>
+<test id="s1-t5" name="CONSULTAR USUARIOS COM SUCESSO SEM ID" line="33">
+<kw name="DADO QUE CONSULTE UM SINGLE USER NO ENDPOINT /api/users" owner="api_reqres">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:47.717606" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>reqres</arg>
+<arg>${url_reqres}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-17T23:12:47.716634" elapsed="0.001932"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:47.715045" elapsed="0.004031"/>
+</kw>
+<kw name="QUANDO EU NÃO PASSAR O PARAMETRO ID" owner="api_reqres">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-17T23:12:47.724539" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-17T23:12:47.723780" elapsed="0.000870"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:47.979663" level="INFO">GET Request : url=https://reqres.in/api/users 
+ path_url=/api/users 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-02-17T23:12:47.980034" level="INFO">GET Response : url=https://reqres.in/api/users 
+ status=200, reason=OK 
+ headers={'Date': 'Tue, 18 Feb 2025 02:12:48 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739723832&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=xJDEA57yRfU5MsxDoDBsCTdw5UN2JRbYtMiBDbpme2c%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1739723832&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=xJDEA57yRfU5MsxDoDBsCTdw5UN2JRbYtMiBDbpme2c%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"41e-bY3U72nulxuwNd/TmihMEHjLmek"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '2', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '913a7e88e98af617-FOR', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=59314&amp;min_rtt=57067&amp;rtt_var=23005&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2834&amp;recv_bytes=768&amp;delivery_rate=71494&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=0bdbf91e1af996e5&amp;ts=89&amp;x=0"'} 
+ body={"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
+ </msg>
+<msg time="2025-02-17T23:12:47.980357" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-02-17T23:12:47.983612" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<var>${resposta}</var>
+<arg>reqres</arg>
+<arg>/api/users</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-17T23:12:47.725157" elapsed="0.258623"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-17T23:12:47.986699" level="INFO">{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}</msg>
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-17T23:12:47.984445" elapsed="0.002994"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-17T23:12:47.989847" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-17T23:12:47.988456" elapsed="0.001752"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:47.721483" elapsed="0.269315"/>
+</kw>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_reqres">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-17T23:12:47.996937" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${resposta.status_code}</arg>
+<arg>${status_code_desejado}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-17T23:12:47.993226" elapsed="0.004139"/>
+</kw>
+<arg>200</arg>
+<status status="PASS" start="2025-02-17T23:12:47.991877" elapsed="0.006002"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:47.712291" elapsed="0.286683"/>
+</test>
+<test id="s1-t6" name="QUANDO EU CONSULTAR USUARIOS COM ID INVALIDO" line="38">
+<kw name="DADO QUE CONSULTE UM SINGLE USER NO ENDPOINT /api/users" owner="api_reqres">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:48.007258" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>reqres</arg>
+<arg>${url_reqres}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-17T23:12:48.006325" elapsed="0.001871"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:48.004746" elapsed="0.003980"/>
+</kw>
+<kw name="QUANDO EU PASSAR O PARAMETRO COM ID INVALIDO" owner="api_reqres">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-17T23:12:48.014451" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-17T23:12:48.013005" elapsed="0.001677"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:48.761520" level="INFO">GET Request : url=https://reqres.in/api/users/23 
+ path_url=/api/users/23 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-02-17T23:12:48.761884" level="INFO">GET Response : url=https://reqres.in/api/users/23 
+ status=404, reason=Not Found 
+ headers={'Date': 'Tue, 18 Feb 2025 02:12:48 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739844768&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=P4mUPvLsFsasjX4fbZr8gjTiefC%2Bfh%2BrAxIcH15V2fw%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1739844768&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=P4mUPvLsFsasjX4fbZr8gjTiefC%2Bfh%2BrAxIcH15V2fw%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'EXPIRED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '913a7e8ab82b4f80-FOR', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=61008&amp;min_rtt=59486&amp;rtt_var=23394&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2836&amp;recv_bytes=771&amp;delivery_rate=68587&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=b30abd9a55518cfb&amp;ts=584&amp;x=0"'} 
+ body={} 
+ </msg>
+<msg time="2025-02-17T23:12:48.762194" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-02-17T23:12:48.765440" level="INFO">${resposta} = &lt;Response [404]&gt;</msg>
+<var>${resposta}</var>
+<arg>reqres</arg>
+<arg>/api/users/23</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-17T23:12:48.015777" elapsed="0.749886"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-17T23:12:48.768609" level="INFO">{}</msg>
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-17T23:12:48.766404" elapsed="0.002428"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-17T23:12:48.770221" level="INFO">${resposta} = &lt;Response [404]&gt;</msg>
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-17T23:12:48.769393" elapsed="0.001031"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:48.011100" elapsed="0.759606"/>
+</kw>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_reqres">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-17T23:12:48.775388" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${resposta.status_code}</arg>
+<arg>${status_code_desejado}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-17T23:12:48.773101" elapsed="0.002531"/>
+</kw>
+<arg>404</arg>
+<status status="PASS" start="2025-02-17T23:12:48.771771" elapsed="0.004182"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:48.002156" elapsed="0.774756"/>
+</test>
+<test id="s1-t7" name="CONSULTAR USUARIOS COM ENDPOINT DESCONHECIDO SEM O PARAMETRO" line="44">
+<kw name="DADO QUE EU CONSULTE O ENDPOINT DESCONHECIDO" owner="api_reqres">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:48.785789" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>reqres</arg>
+<arg>${url_reqres}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-17T23:12:48.784871" elapsed="0.001828"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:48.783611" elapsed="0.003588"/>
+</kw>
+<kw name="QUANDO EU PASSAR SEM PARAMETRO" owner="api_reqres">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-17T23:12:48.792521" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-17T23:12:48.789703" elapsed="0.002960"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:49.085022" level="INFO">GET Request : url=https://reqres.in/api/unknown 
+ path_url=/api/unknown 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-02-17T23:12:49.085575" level="INFO">GET Response : url=https://reqres.in/api/unknown 
+ status=200, reason=OK 
+ headers={'Date': 'Tue, 18 Feb 2025 02:12:49 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739842426&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=OUqbOaGCm2cnr%2FOIqGAc%2FgIwwhzuoidNTBzipJlkVNM%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1739842426&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=OUqbOaGCm2cnr%2FOIqGAc%2FgIwwhzuoidNTBzipJlkVNM%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2fb-zJ/iiAzm4zf7SruyfEtNo0xEDoY"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '2343', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '913a7e8fcdb2f637-FOR', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=61140&amp;min_rtt=57216&amp;rtt_var=20500&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2836&amp;recv_bytes=770&amp;delivery_rate=56537&amp;cwnd=253&amp;unsent_bytes=0&amp;cid=22c91fa7f71ac0dc&amp;ts=98&amp;x=0"'} 
+ body={"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"},{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},{"id":3,"name":"true red","year":2002,"color":"#BF1932","pantone_value":"19-1664"},{"id":4,"name":"aqua sky","year":2003,"color":"#7BC4C4","pantone_value":"14-4811"},{"id":5,"name":"tigerlily","year":2004,"color":"#E2583E","pantone_value":"17-1456"},{"id":6,"name":"blue turquoise","year":2005,"color":"#53B0AE","pantone_value":"15-5217"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
+ </msg>
+<msg time="2025-02-17T23:12:49.086488" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-02-17T23:12:49.089789" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<var>${resposta}</var>
+<arg>reqres</arg>
+<arg>/api/unknown</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-17T23:12:48.793223" elapsed="0.296802"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-17T23:12:49.093401" level="INFO">{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"},{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},{"id":3,"name":"true red","year":2002,"color":"#BF1932","pantone_value":"19-1664"},{"id":4,"name":"aqua sky","year":2003,"color":"#7BC4C4","pantone_value":"14-4811"},{"id":5,"name":"tigerlily","year":2004,"color":"#E2583E","pantone_value":"17-1456"},{"id":6,"name":"blue turquoise","year":2005,"color":"#53B0AE","pantone_value":"15-5217"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}</msg>
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.090906" elapsed="0.002756"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-17T23:12:49.095181" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.094258" elapsed="0.001116"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:48.788579" elapsed="0.307077"/>
+</kw>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_reqres">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-17T23:12:49.101484" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${resposta.status_code}</arg>
+<arg>${status_code_desejado}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.097887" elapsed="0.003870"/>
+</kw>
+<arg>200</arg>
+<status status="PASS" start="2025-02-17T23:12:49.096770" elapsed="0.005323"/>
+</kw>
+<kw name="ENTÃO VALIDO O CONTEUDO DO RESPONSE BODY DESCONHECIDO LISTA" owner="api_reqres">
+<kw name="Convert String To Json" owner="JSONLibrary">
+<msg time="2025-02-17T23:12:49.105608" level="INFO">${Json_response} = {'page': 1, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 1, 'name': 'cerulean', 'year': 2000, 'color': '#98B2D1', 'pantone_value': '15-4020'}, {'id': 2, 'name': 'fuchsia rose', 'year'...</msg>
+<var>${Json_response}</var>
+<arg>${resposta.text}</arg>
+<doc>Convert String to JSON object</doc>
+<status status="PASS" start="2025-02-17T23:12:49.104121" elapsed="0.001560"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-17T23:12:49.106365" level="INFO">${data_list} = [{'id': 1, 'name': 'cerulean', 'year': 2000, 'color': '#98B2D1', 'pantone_value': '15-4020'}, {'id': 2, 'name': 'fuchsia rose', 'year': 2001, 'color': '#C74375', 'pantone_value': '17-2031'}, {'id': 3,...</msg>
+<var>${data_list}</var>
+<arg>${Json_response}</arg>
+<arg>data</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.105959" elapsed="0.000462"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.107043" elapsed="0.000341"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.107630" elapsed="0.000300"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>year</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.108185" elapsed="0.000287"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>color</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.108685" elapsed="0.000261"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>pantone_value</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.109171" elapsed="0.000274"/>
+</kw>
+<var name="${item}">{'id': 1, 'name': 'cerulean', 'year': 2000, 'color': '#98B2D1', 'pantone_value': '15-4020'}</var>
+<status status="PASS" start="2025-02-17T23:12:49.106888" elapsed="0.002665"/>
+</iter>
+<iter>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.110128" elapsed="0.000422"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.110850" elapsed="0.000387"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>year</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.111644" elapsed="0.000475"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>color</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.112493" elapsed="0.000457"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>pantone_value</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.113179" elapsed="0.000229"/>
+</kw>
+<var name="${item}">{'id': 2, 'name': 'fuchsia rose', 'year': 2001, 'color': '#C74375', 'pantone_value': '17-2031'}</var>
+<status status="PASS" start="2025-02-17T23:12:49.109910" elapsed="0.003559"/>
+</iter>
+<iter>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.113741" elapsed="0.000176"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.114055" elapsed="0.000252"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>year</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.114562" elapsed="0.000378"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>color</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.115223" elapsed="0.000206"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>pantone_value</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.115573" elapsed="0.000174"/>
+</kw>
+<var name="${item}">{'id': 3, 'name': 'true red', 'year': 2002, 'color': '#BF1932', 'pantone_value': '19-1664'}</var>
+<status status="PASS" start="2025-02-17T23:12:49.113639" elapsed="0.002293"/>
+</iter>
+<iter>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.116228" elapsed="0.000183"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.116552" elapsed="0.000174"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>year</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.116863" elapsed="0.000171"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>color</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.117185" elapsed="0.000172"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>pantone_value</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.117495" elapsed="0.000169"/>
+</kw>
+<var name="${item}">{'id': 4, 'name': 'aqua sky', 'year': 2003, 'color': '#7BC4C4', 'pantone_value': '14-4811'}</var>
+<status status="PASS" start="2025-02-17T23:12:49.116110" elapsed="0.001613"/>
+</iter>
+<iter>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.117967" elapsed="0.000182"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.118294" elapsed="0.000173"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>year</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.118605" elapsed="0.000169"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>color</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.118909" elapsed="0.000167"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>pantone_value</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.119226" elapsed="0.000171"/>
+</kw>
+<var name="${item}">{'id': 5, 'name': 'tigerlily', 'year': 2004, 'color': '#E2583E', 'pantone_value': '17-1456'}</var>
+<status status="PASS" start="2025-02-17T23:12:49.117870" elapsed="0.001587"/>
+</iter>
+<iter>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.119705" elapsed="0.000174"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.120017" elapsed="0.000204"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>year</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.120423" elapsed="0.000214"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>color</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.120875" elapsed="0.000214"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${item}</arg>
+<arg>pantone_value</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.121293" elapsed="0.000185"/>
+</kw>
+<var name="${item}">{'id': 6, 'name': 'blue turquoise', 'year': 2005, 'color': '#53B0AE', 'pantone_value': '15-5217'}</var>
+<status status="PASS" start="2025-02-17T23:12:49.119606" elapsed="0.001932"/>
+</iter>
+<var>${item}</var>
+<value>@{data_list}</value>
+<status status="PASS" start="2025-02-17T23:12:49.106565" elapsed="0.015025"/>
+</for>
+<status status="PASS" start="2025-02-17T23:12:49.103410" elapsed="0.018273"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:48.780708" elapsed="0.341300"/>
+</test>
+<test id="s1-t8" name="CONSULTAR USUARIOS COM ENDPOINT DESCONHECIDO COM PARAMETRO VALIDO" line="52">
+<kw name="DADO QUE EU CONSULTE O ENDPOINT DESCONHECIDO" owner="api_reqres">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:49.124739" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>reqres</arg>
+<arg>${url_reqres}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-17T23:12:49.124532" elapsed="0.000423"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:49.124169" elapsed="0.000898"/>
+</kw>
+<kw name="QUANDO EU PASSAR UM PARAMETRO VALIDO" owner="api_reqres">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-17T23:12:49.126019" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.125772" elapsed="0.000287"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:49.804688" level="INFO">GET Request : url=https://reqres.in/api/unknown/2 
+ path_url=/api/unknown/2 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-02-17T23:12:49.805088" level="INFO">GET Response : url=https://reqres.in/api/unknown/2 
+ status=200, reason=OK 
+ headers={'Date': 'Tue, 18 Feb 2025 02:12:49 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739536019&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=5Z3qBWNw55qsAdbmSUN3HymCkH3JFOgwDg3tLMI2hLY%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1739536019&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=5Z3qBWNw55qsAdbmSUN3HymCkH3JFOgwDg3tLMI2hLY%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"122-EJoELj/0trWDxXZhKN3eWEbbcBA"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'REVALIDATED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '913a7e918ee7f62a-FOR', 'Content-Encoding': 'gzip', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=59076&amp;min_rtt=58404&amp;rtt_var=22382&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2835&amp;recv_bytes=772&amp;delivery_rate=69858&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=fc5067bcfef6b37c&amp;ts=533&amp;x=0"'} 
+ body={"data":{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
+ </msg>
+<msg time="2025-02-17T23:12:49.805767" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-02-17T23:12:49.808930" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<var>${resposta}</var>
+<arg>reqres</arg>
+<arg>/api/unknown/2</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.126227" elapsed="0.682936"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-17T23:12:49.811994" level="INFO">{"data":{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}</msg>
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.809821" elapsed="0.002406"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-17T23:12:49.813612" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.812778" elapsed="0.001037"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:49.125431" elapsed="0.688662"/>
+</kw>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_reqres">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-17T23:12:49.819832" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${resposta.status_code}</arg>
+<arg>${status_code_desejado}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.816513" elapsed="0.003589"/>
+</kw>
+<arg>200</arg>
+<status status="PASS" start="2025-02-17T23:12:49.815152" elapsed="0.005281"/>
+</kw>
+<kw name="ENTÃO VALIDO O CONTEUDO DO RESPONSE BODY DESCONHECIDO" owner="api_reqres">
+<kw name="Convert String To Json" owner="JSONLibrary">
+<msg time="2025-02-17T23:12:49.827475" level="INFO">${Json_response} = {'data': {'id': 2, 'name': 'fuchsia rose', 'year': 2001, 'color': '#C74375', 'pantone_value': '17-2031'}, 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=ref...</msg>
+<var>${Json_response}</var>
+<arg>${resposta.text}</arg>
+<doc>Convert String to JSON object</doc>
+<status status="PASS" start="2025-02-17T23:12:49.823889" elapsed="0.003755"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-17T23:12:49.829032" level="INFO">${data_list} = {'id': 2, 'name': 'fuchsia rose', 'year': 2001, 'color': '#C74375', 'pantone_value': '17-2031'}</msg>
+<var>${data_list}</var>
+<arg>${Json_response}</arg>
+<arg>data</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.828209" elapsed="0.000941"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${data_list}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.829662" elapsed="0.000624"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${data_list}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.830775" elapsed="0.000590"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${data_list}</arg>
+<arg>year</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.831942" elapsed="0.000991"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${data_list}</arg>
+<arg>color</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.833762" elapsed="0.001217"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${data_list}</arg>
+<arg>pantone_value</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.836632" elapsed="0.001505"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:49.821955" elapsed="0.016960"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:49.123281" elapsed="0.716916"/>
+</test>
+<test id="s1-t9" name="CONSULTAR USUARIOS COM ENDPOINT DESCONHECIDO COM PARAMETRO INVALIDO" line="59">
+<kw name="DADO QUE EU CONSULTE O ENDPOINT DESCONHECIDO" owner="api_reqres">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:49.851970" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>reqres</arg>
+<arg>${url_reqres}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-17T23:12:49.850862" elapsed="0.002170"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:49.848570" elapsed="0.005008"/>
+</kw>
+<kw name="QUANDO EU PASSAR UM PARAMETRO INVALIDO" owner="api_reqres">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-17T23:12:49.855802" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.855351" elapsed="0.000529"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-02-17T23:12:50.557499" level="INFO">GET Request : url=https://reqres.in/api/unknown/23 
+ path_url=/api/unknown/23 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-02-17T23:12:50.557857" level="INFO">GET Response : url=https://reqres.in/api/unknown/23 
+ status=404, reason=Not Found 
+ headers={'Date': 'Tue, 18 Feb 2025 02:12:50 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739844770&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=JyuY9dl0IqGTunQlNf%2BrH%2FmdyuZhhEOR5HE1GOufUnc%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1739844770&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=JyuY9dl0IqGTunQlNf%2BrH%2FmdyuZhhEOR5HE1GOufUnc%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'EXPIRED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '913a7e963bd5f63f-FOR', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=61798&amp;min_rtt=59779&amp;rtt_var=19303&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2835&amp;recv_bytes=773&amp;delivery_rate=59533&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=61f35678efbd2f2b&amp;ts=535&amp;x=0"'} 
+ body={} 
+ </msg>
+<msg time="2025-02-17T23:12:50.558161" level="INFO">C:\Users\André\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-02-17T23:12:50.561538" level="INFO">${resposta} = &lt;Response [404]&gt;</msg>
+<var>${resposta}</var>
+<arg>reqres</arg>
+<arg>/api/unknown/23</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-17T23:12:49.856186" elapsed="0.705575"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-17T23:12:50.564696" level="INFO">{}</msg>
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-17T23:12:50.562477" elapsed="0.002438"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-17T23:12:50.567004" level="INFO">${resposta} = &lt;Response [404]&gt;</msg>
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-17T23:12:50.565635" elapsed="0.001715"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:49.854526" elapsed="0.713526"/>
+</kw>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_reqres">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-17T23:12:50.573895" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${resposta.status_code}</arg>
+<arg>${status_code_desejado}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-17T23:12:50.570324" elapsed="0.003846"/>
+</kw>
+<arg>404</arg>
+<status status="PASS" start="2025-02-17T23:12:50.569119" elapsed="0.005376"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:12:49.844812" elapsed="0.730474"/>
+</test>
+<status status="PASS" start="2025-02-17T23:12:44.515432" elapsed="6.062717"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="testApi reqres">testApi reqres</stat>
+<stat pass="9" fail="0" skip="0" id="s1" name="testApi reqres">testApi reqres</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-02-17T23:12:47.452350" level="WARN">Multiple tests with name 'CONSULTAR USUARIOS COM SUCESSO' executed in suite 'testApi reqres'.</msg>
 </errors>
 </robot>
