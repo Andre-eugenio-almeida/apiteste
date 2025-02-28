@@ -132,6 +132,78 @@ ENTÃO VALIDO O CONTEUDO DO RESPONSE BODY DESCONHECIDO LISTA
     END
     
                 
-   
+   ################################################################################################################
 
-  
+DADO QUE EU TENHA NOME E JOB DO USUARIO 
+    ${body}    Create Dictionary    name=Morpheus    job=Leader
+    ${resposta}    POST On Session    reqres    /api/users   json=${body}    expected_status=any
+    Log    ${resposta.text}
+    Set Suite Variable    ${resposta}    
+
+QUANDO EU EFETUAR A REQUISIÇÃO 
+     ${body}    Create Dictionary    name=Morpheus    job=Leader
+    ${resposta}    POST On Session    reqres    /api/users   json=${body}    expected_status=any
+    Log    ${resposta.text}
+    Set Suite Variable    ${resposta}   
+
+QUANDO EU EFETUAR A REQUISIÇÃO SEM O JOB
+     ${body}    Create Dictionary    name=Morpheus    
+    ${resposta}    POST On Session    reqres    /api/users   json=${body}    expected_status=any
+    Log    ${resposta.text}
+    Set Suite Variable    ${resposta}   
+
+QUANDO EU EFETUAR A REQUISIÇÃO SEM O NOME DO USUARIO
+         ${body}    Create Dictionary        job=Leader
+    ${resposta}    POST On Session    reqres    /api/users   json=${body}    expected_status=any
+    Log    ${resposta.text}
+    Set Suite Variable    ${resposta}    
+
+
+QUANDO EU EFETUAR A REQUISIÇÃO COM NOME DIFERENTE
+        ${body}    Create Dictionary    name=André    job=Leader
+    ${resposta}    POST On Session    reqres    /api/users   json=${body}   
+    Log    ${resposta.text} 
+    Set Suite Variable    ${resposta}
+
+
+
+##################################################################################
+
+
+
+QUANDO QUE EU ATUALIZAR UM USUARIO 
+       ${body}   Create Dictionary    name=morpheus    job=zion resident
+    ${resposta}   PUT On Session   reqres    /api/users/2    json=${body} 
+    Log    ${resposta.text}  
+    Set Suite Variable    ${resposta}
+
+QUANDO EU ATUALIZAR O MOME DO USUARIO PARA NUMEROS
+        ${body}    Create Dictionary    name=123    job=zion resident
+    ${resposta}    PUT On Session   reqres    /api/users/2    json=${body} 
+    Log    ${resposta.text}  
+    Set Suite Variable    ${resposta}
+
+
+QUANDO EU ATUALIZAR USUARIO SEM O JOB
+     ${body}   Create Dictionary    name=123    
+    ${resposta}   PUT On Session    reqres    /api/users/2    json=${body}   
+    Log    ${resposta.text}
+    Set Suite Variable    ${resposta}
+
+QUANDO EU ATUALIZAR USUARIO SEM NOME 
+    ${body}   Create Dictionary          job=zion resident
+    ${resposta}   PUT On Session    reqres    /api/users/2    json=${body}   
+    Log    ${resposta.text}
+    Set Suite Variable    ${resposta}
+ 
+
+###################################################################################
+
+DADO QUE EU CONSULTE O ENDPOINT 
+    Create Session    reqres    ${url_reqres}
+
+QUANDO EU DELETAR UM USUARIO
+      ${headers}    Create Dictionary    
+    ${resposta}    DELETE On Session    reqres     /api/users/2       expected_status=any
+    Log    ${resposta.text}
+    Set Suite Variable    ${resposta}
