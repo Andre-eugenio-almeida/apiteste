@@ -1,140 +1,348 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-03-15T08:17:59.580286" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-03-18T19:50:53.711014" rpa="false" schemaversion="5">
 <suite id="s1" name="Testfront Hotmail" source="C:\repositorio\apiteste\tests\testfront_hotmail.robot">
 <test id="s1-t1" name="QUANDO EU CLICAR EM AVANÇAR SEM INSERIR E-MAIL" line="8">
 <kw name="Acessar o site" owner="front_hotmail">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-15T08:18:00.050404" level="INFO">Opening browser 'edge' to base url 'http://signup.live.com'.</msg>
+<msg time="2025-03-18T19:50:54.063541" level="INFO">Opening browser 'edge' to base url 'http://signup.live.com'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-15T08:18:00.049935" elapsed="4.508698"/>
+<status status="PASS" start="2025-03-18T19:50:54.063078" elapsed="4.308906"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-15T08:18:04.559382" elapsed="0.130470"/>
+<status status="PASS" start="2025-03-18T19:50:58.372469" elapsed="0.041741"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-15T08:18:07.690956" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-03-18T19:51:01.415319" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-15T08:18:04.690263" elapsed="3.000932"/>
+<status status="PASS" start="2025-03-18T19:50:58.414654" elapsed="3.000891"/>
 </kw>
-<status status="PASS" start="2025-03-15T08:18:00.048591" elapsed="7.642863"/>
+<status status="PASS" start="2025-03-18T19:50:54.061819" elapsed="7.353992"/>
 </kw>
 <kw name="Quando eu clicar em avançar" owner="front_hotmail">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-15T08:18:07.693571" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Avançar')]'.</msg>
+<msg time="2025-03-18T19:51:01.418735" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Avançar')]'.</msg>
 <arg>xpath=//button[contains(text(), 'Avançar')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-15T08:18:07.692843" elapsed="0.194933"/>
+<status status="PASS" start="2025-03-18T19:51:01.417339" elapsed="0.423694"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-15T08:18:12.889382" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
+<msg time="2025-03-18T19:51:04.842328" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-15T08:18:07.888182" elapsed="5.001407"/>
+<status status="PASS" start="2025-03-18T19:51:01.841429" elapsed="3.001267"/>
 </kw>
-<status status="PASS" start="2025-03-15T08:18:07.692148" elapsed="5.197667"/>
+<status status="PASS" start="2025-03-18T19:51:01.416577" elapsed="3.426560"/>
 </kw>
 <kw name="Então deve retornar uma mensagem" owner="front_hotmail">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-15T08:18:12.939773" level="INFO">${mensagem} = É necessário um endereço de email</msg>
+<msg time="2025-03-18T19:51:04.905881" level="INFO">${mensagem} = É necessário um endereço de email</msg>
 <var>${mensagem}</var>
 <arg>xpath=//div[contains(text(), '${mensagem_retorno}')]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-15T08:18:12.891189" elapsed="0.048650"/>
+<status status="PASS" start="2025-03-18T19:51:04.845807" elapsed="0.060145"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-15T08:18:12.940106" elapsed="2.562072"/>
+<status status="PASS" start="2025-03-18T19:51:04.906201" elapsed="2.248642"/>
 </kw>
 <arg>É necessário um endereço de email</arg>
-<status status="PASS" start="2025-03-15T08:18:12.890545" elapsed="2.611881"/>
+<status status="PASS" start="2025-03-18T19:51:04.844536" elapsed="2.310770"/>
 </kw>
-<status status="PASS" start="2025-03-15T08:18:00.047008" elapsed="15.456038"/>
+<status status="PASS" start="2025-03-18T19:50:54.060685" elapsed="13.095866"/>
 </test>
 <test id="s1-t2" name="QUANDO EU INSERIR UM E-MAIL JÁ EXISTENTE" line="15">
 <kw name="Acessar o site" owner="front_hotmail">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-15T08:18:15.506768" level="INFO">Opening browser 'edge' to base url 'http://signup.live.com'.</msg>
+<msg time="2025-03-18T19:51:07.164966" level="INFO">Opening browser 'edge' to base url 'http://signup.live.com'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-15T08:18:15.506372" elapsed="4.195106"/>
+<status status="PASS" start="2025-03-18T19:51:07.163768" elapsed="7.018697"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-15T08:18:19.701916" elapsed="0.142924"/>
+<status status="PASS" start="2025-03-18T19:51:14.182765" elapsed="0.050065"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-15T08:18:22.845961" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-03-18T19:51:17.233929" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-15T08:18:19.845204" elapsed="3.001145"/>
+<status status="PASS" start="2025-03-18T19:51:14.233368" elapsed="3.000789"/>
 </kw>
-<status status="PASS" start="2025-03-15T08:18:15.505949" elapsed="7.340738"/>
+<status status="PASS" start="2025-03-18T19:51:07.162527" elapsed="10.071876"/>
 </kw>
 <kw name="Quando eu inserir um e-mail" owner="front_hotmail">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[@id="usernameInput"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-15T08:18:22.848070" elapsed="0.052553"/>
+<status status="PASS" start="2025-03-18T19:51:17.235563" elapsed="0.047769"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-15T08:18:22.901936" level="INFO">Typing text 'almeida.ae@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
+<msg time="2025-03-18T19:51:17.284051" level="INFO">Typing text 'almeida.ae@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
 <arg>xpath=//*[@id="usernameInput"]</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-15T08:18:22.900947" elapsed="0.359148"/>
+<status status="PASS" start="2025-03-18T19:51:17.283655" elapsed="0.280396"/>
 </kw>
-<status status="PASS" start="2025-03-15T08:18:22.847431" elapsed="0.412992"/>
+<status status="PASS" start="2025-03-18T19:51:17.234973" elapsed="0.329377"/>
 </kw>
 <kw name="Quando eu clicar em avançar" owner="front_hotmail">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-15T08:18:23.262239" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Avançar')]'.</msg>
+<msg time="2025-03-18T19:51:17.566719" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Avançar')]'.</msg>
 <arg>xpath=//button[contains(text(), 'Avançar')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-15T08:18:23.261791" elapsed="0.588442"/>
+<status status="PASS" start="2025-03-18T19:51:17.565971" elapsed="0.156739"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-15T08:18:28.851842" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
+<msg time="2025-03-18T19:51:20.723846" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-15T08:18:23.850610" elapsed="5.001379"/>
+<status status="PASS" start="2025-03-18T19:51:17.722964" elapsed="3.001242"/>
 </kw>
-<status status="PASS" start="2025-03-15T08:18:23.261137" elapsed="5.591009"/>
+<status status="PASS" start="2025-03-18T19:51:17.565101" elapsed="3.159520"/>
 </kw>
 <kw name="Então deve retornar uma mensagem" owner="front_hotmail">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-15T08:18:28.900063" level="INFO">${mensagem} = almeida.ae@outlook.com já é uma conta Microsoft. Tente outro nome ou reivindique um destes que está disponível. Se for seu, entre agora.</msg>
+<msg time="2025-03-18T19:51:20.811818" level="INFO">${mensagem} = almeida.ae@outlook.com já é uma conta Microsoft. Tente outro nome ou reivindique um destes que está disponível. Se for seu, entre agora.</msg>
 <var>${mensagem}</var>
 <arg>xpath=//div[contains(text(), '${mensagem_retorno}')]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-15T08:18:28.853367" elapsed="0.046767"/>
+<status status="PASS" start="2025-03-18T19:51:20.727157" elapsed="0.084728"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-15T08:18:28.900371" elapsed="2.332450"/>
+<status status="PASS" start="2025-03-18T19:51:20.812115" elapsed="2.236886"/>
 </kw>
 <arg>já é uma conta Microsoft</arg>
-<status status="PASS" start="2025-03-15T08:18:28.852736" elapsed="2.380282"/>
+<status status="PASS" start="2025-03-18T19:51:20.725914" elapsed="2.323531"/>
 </kw>
-<status status="PASS" start="2025-03-15T08:18:15.505111" elapsed="15.728514"/>
+<status status="PASS" start="2025-03-18T19:51:07.160366" elapsed="15.890306"/>
+</test>
+<test id="s1-t3" name="QUANDO EU INSERIR UMA SENHA USANDO SOMENTE NÚMEROS" line="21">
+<kw name="Acessar o site" owner="front_hotmail">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:23.059622" level="INFO">Opening browser 'edge' to base url 'http://signup.live.com'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-18T19:51:23.058493" elapsed="4.099370"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-18T19:51:27.158272" elapsed="0.086040"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T19:51:30.245449" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T19:51:27.244659" elapsed="3.000944"/>
+</kw>
+<status status="PASS" start="2025-03-18T19:51:23.057256" elapsed="7.188513"/>
+</kw>
+<kw name="Quando eu inserir um e-mail" owner="front_hotmail">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="usernameInput"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T19:51:30.246839" elapsed="0.045614"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:30.293265" level="INFO">Typing text 'almeida.ae@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
+<arg>xpath=//*[@id="usernameInput"]</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:30.292886" elapsed="0.316868"/>
+</kw>
+<status status="PASS" start="2025-03-18T19:51:30.246386" elapsed="0.363544"/>
+</kw>
+<kw name="Quando eu inserir uma senha numérica" owner="front_hotmail">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:30.611519" level="INFO">Clicking element 'xpath=//*[@id="easiSwitch"]'.</msg>
+<arg>xpath=//*[@id="easiSwitch"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:30.611133" elapsed="0.152711"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:30.764941" level="INFO">Typing text 'vugo_broquinha@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
+<arg>xpath=//*[@id="usernameInput"]</arg>
+<arg>${EMAIL2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:30.764380" elapsed="0.380031"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:31.145266" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Avançar')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Avançar')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:31.144829" elapsed="0.172346"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="Password"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T19:51:31.317583" elapsed="0.994398"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:32.312942" level="INFO">Typing text '123456' into text field 'xpath=//*[@id="Password"]'.</msg>
+<arg>xpath=//*[@id="Password"]</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:32.312394" elapsed="0.173764"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T19:51:35.487632" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T19:51:32.486536" elapsed="3.001458"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:35.489347" level="INFO">Clicking element '//*[@id="nextButton"]'.</msg>
+<arg>//*[@id="nextButton"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:35.488634" elapsed="0.135341"/>
+</kw>
+<status status="PASS" start="2025-03-18T19:51:30.610560" elapsed="5.013586"/>
+</kw>
+<kw name="Então deve retornar uma mensagem" owner="front_hotmail">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:35.991290" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-18T19:51:35.991637" level="FAIL">Element with locator 'xpath=//div[contains(text(), 'As senhas devem ter, no mínimo, 8 carateres e conter, pelo menos, dois dos seguintes elementos: letras maiúsculas e minúsculas, números e símbolos')]' not found.</msg>
+<var>${mensagem}</var>
+<arg>xpath=//div[contains(text(), '${mensagem_retorno}')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-03-18T19:51:35.625645" elapsed="0.370068">Element with locator 'xpath=//div[contains(text(), 'As senhas devem ter, no mínimo, 8 carateres e conter, pelo menos, dois dos seguintes elementos: letras maiúsculas e minúsculas, números e símbolos')]' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-03-18T19:51:35.996000" elapsed="0.000052"/>
+</kw>
+<arg>As senhas devem ter, no mínimo, 8 carateres e conter, pelo menos, dois dos seguintes elementos: letras maiúsculas e minúsculas, números e símbolos</arg>
+<status status="FAIL" start="2025-03-18T19:51:35.624876" elapsed="0.371375">Element with locator 'xpath=//div[contains(text(), 'As senhas devem ter, no mínimo, 8 carateres e conter, pelo menos, dois dos seguintes elementos: letras maiúsculas e minúsculas, números e símbolos')]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-03-18T19:51:23.054514" elapsed="12.942255">Element with locator 'xpath=//div[contains(text(), 'As senhas devem ter, no mínimo, 8 carateres e conter, pelo menos, dois dos seguintes elementos: letras maiúsculas e minúsculas, números e símbolos')]' not found.</status>
+</test>
+<test id="s1-t4" name="QUANDO EU INSERIR UMA SENHA VALIDA" line="27">
+<kw name="Acessar o site" owner="front_hotmail">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:35.999949" level="INFO">Opening browser 'edge' to base url 'http://signup.live.com'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-18T19:51:35.999543" elapsed="5.386668"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-18T19:51:41.386493" elapsed="0.043658"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T19:51:44.431027" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T19:51:41.430393" elapsed="3.000782"/>
+</kw>
+<status status="PASS" start="2025-03-18T19:51:35.999098" elapsed="8.432237"/>
+</kw>
+<kw name="Quando eu inserir um e-mail" owner="front_hotmail">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="usernameInput"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T19:51:44.432495" elapsed="0.047054"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:44.480611" level="INFO">Typing text 'almeida.ae@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
+<arg>xpath=//*[@id="usernameInput"]</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:44.480011" elapsed="0.302114"/>
+</kw>
+<status status="PASS" start="2025-03-18T19:51:44.431922" elapsed="0.350378"/>
+</kw>
+<kw name="Quando eu inserir uma senha válida" owner="front_hotmail">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:44.783643" level="INFO">Clicking element 'xpath=//*[@id="easiSwitch"]'.</msg>
+<arg>xpath=//*[@id="easiSwitch"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:44.783369" elapsed="0.113280"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:44.897579" level="INFO">Typing text 'vugo_broquinha@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
+<arg>xpath=//*[@id="usernameInput"]</arg>
+<arg>${EMAIL2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:44.897060" elapsed="0.382529"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:45.280718" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Avançar')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Avançar')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:45.280208" elapsed="0.144328"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="Password"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T19:51:45.425458" elapsed="0.894409"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T19:51:48.321116" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T19:51:46.320148" elapsed="2.001322"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:48.322975" level="INFO">Typing text 'Meggie@bibi12' into text field 'xpath=//*[@id="Password"]'.</msg>
+<arg>xpath=//*[@id="Password"]</arg>
+<arg>${SENHA2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:48.322093" elapsed="0.176089"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T19:51:50.499123" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T19:51:48.498435" elapsed="2.001072"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:50.500887" level="INFO">Clicking element '//*[@id="nextButton"]'.</msg>
+<arg>//*[@id="nextButton"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T19:51:50.500168" elapsed="0.159886"/>
+</kw>
+<status status="PASS" start="2025-03-18T19:51:44.782920" elapsed="5.877352"/>
+</kw>
+<kw name="Então deve retornar uma mensagem" owner="front_hotmail">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:51:50.999554" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-18T19:51:50.999851" level="FAIL">Element with locator 'xpath=//div[contains(text(), 'Precisamos de um pouco mais de informações para configurar sua conta.')]' not found.</msg>
+<var>${mensagem}</var>
+<arg>xpath=//div[contains(text(), '${mensagem_retorno}')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-03-18T19:51:50.662412" elapsed="0.339493">Element with locator 'xpath=//div[contains(text(), 'Precisamos de um pouco mais de informações para configurar sua conta.')]' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-03-18T19:51:51.002199" elapsed="0.000053"/>
+</kw>
+<arg>Precisamos de um pouco mais de informações para configurar sua conta.</arg>
+<status status="FAIL" start="2025-03-18T19:51:50.661470" elapsed="0.340962">Element with locator 'xpath=//div[contains(text(), 'Precisamos de um pouco mais de informações para configurar sua conta.')]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-03-18T19:51:35.998398" elapsed="15.004557">Element with locator 'xpath=//div[contains(text(), 'Precisamos de um pouco mais de informações para configurar sua conta.')]' not found.</status>
 </test>
 <doc>teste site Amazon</doc>
-<status status="PASS" start="2025-03-15T08:17:59.582318" elapsed="31.653133"/>
+<status status="FAIL" start="2025-03-18T19:50:53.713064" elapsed="57.292128"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Testfront Hotmail">Testfront Hotmail</stat>
+<stat pass="2" fail="2" skip="0" id="s1" name="Testfront Hotmail">Testfront Hotmail</stat>
 </suite>
 </statistics>
 <errors>
