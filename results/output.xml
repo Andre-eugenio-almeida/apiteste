@@ -1,350 +1,349 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-03-18T19:50:53.711014" rpa="false" schemaversion="5">
-<suite id="s1" name="Testfront Hotmail" source="C:\repositorio\apiteste\tests\testfront_hotmail.robot">
-<test id="s1-t1" name="QUANDO EU CLICAR EM AVANÇAR SEM INSERIR E-MAIL" line="8">
-<kw name="Acessar o site" owner="front_hotmail">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:50:54.063541" level="INFO">Opening browser 'edge' to base url 'http://signup.live.com'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=${BROWSER}</arg>
-<arg>options=add_experimental_option("detach", True)</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-18T19:50:54.063078" elapsed="4.308906"/>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-04-13T18:55:43.650150" rpa="false" schemaversion="5">
+<suite id="s1" name="testApi marvel" source="C:\repositorio\apiteste\tests\testApi_marvel.robot">
+<test id="s1-t1" name="ENDPOINT CHARACTERS - SUCESSO" line="7">
+<kw name="DADO QUE EU CONSULTE O ENDPOINT" owner="api_marvel">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:55:44.104460" level="INFO">Creating Session using : alias=marvel, url=http://gateway.marvel.com/v1/public, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>marvel</arg>
+<arg>${url_marvel}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-13T18:55:44.104091" elapsed="0.000692"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-18T19:50:58.372469" elapsed="0.041741"/>
+<status status="PASS" start="2025-04-13T18:55:44.102950" elapsed="0.001997"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T19:51:01.415319" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T19:50:58.414654" elapsed="3.000891"/>
+<kw name="QUANDO EU PASSAR OS PARAMETROS" owner="api_marvel">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-13T18:55:44.106333" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-13T18:55:44.105873" elapsed="0.000514"/>
 </kw>
-<status status="PASS" start="2025-03-18T19:50:54.061819" elapsed="7.353992"/>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:55:52.871226" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460388AD0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:01.605837" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46036E710&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:10.552948" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46036E990&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:18.974762" level="FAIL">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46031C8A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<var>${resposta}</var>
+<arg>marvel</arg>
+<arg>/characters</arg>
+<arg>params=apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-04-13T18:55:44.106584" elapsed="34.905000">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46031C8A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </kw>
-<kw name="Quando eu clicar em avançar" owner="front_hotmail">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:01.418735" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Avançar')]'.</msg>
-<arg>xpath=//button[contains(text(), 'Avançar')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:01.417339" elapsed="0.423694"/>
+<kw name="Log" owner="BuiltIn">
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-04-13T18:56:19.012376" elapsed="0.000106"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T19:51:04.842328" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T19:51:01.841429" elapsed="3.001267"/>
+<kw name="Set Test Variable" owner="BuiltIn">
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" start="2025-04-13T18:56:19.012963" elapsed="0.000089"/>
 </kw>
-<status status="PASS" start="2025-03-18T19:51:01.416577" elapsed="3.426560"/>
+<status status="FAIL" start="2025-04-13T18:55:44.105438" elapsed="34.908142">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46031C8A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </kw>
-<kw name="Então deve retornar uma mensagem" owner="front_hotmail">
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:04.905881" level="INFO">${mensagem} = É necessário um endereço de email</msg>
-<var>${mensagem}</var>
-<arg>xpath=//div[contains(text(), '${mensagem_retorno}')]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:04.845807" elapsed="0.060145"/>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_marvel">
+<arg>200</arg>
+<status status="NOT RUN" start="2025-04-13T18:56:19.014852" elapsed="0.000130"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-18T19:51:04.906201" elapsed="2.248642"/>
-</kw>
-<arg>É necessário um endereço de email</arg>
-<status status="PASS" start="2025-03-18T19:51:04.844536" elapsed="2.310770"/>
-</kw>
-<status status="PASS" start="2025-03-18T19:50:54.060685" elapsed="13.095866"/>
+<status status="FAIL" start="2025-04-13T18:55:44.100248" elapsed="34.915874">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46031C8A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </test>
-<test id="s1-t2" name="QUANDO EU INSERIR UM E-MAIL JÁ EXISTENTE" line="15">
-<kw name="Acessar o site" owner="front_hotmail">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:07.164966" level="INFO">Opening browser 'edge' to base url 'http://signup.live.com'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=${BROWSER}</arg>
-<arg>options=add_experimental_option("detach", True)</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-18T19:51:07.163768" elapsed="7.018697"/>
+<test id="s1-t2" name="ENDPOINT CHARACTERS - APIKEY INVALIDA" line="12">
+<kw name="DADO QUE EU CONSULTE O ENDPOINT" owner="api_marvel">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:56:19.025280" level="INFO">Creating Session using : alias=marvel, url=http://gateway.marvel.com/v1/public, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>marvel</arg>
+<arg>${url_marvel}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-13T18:56:19.024905" elapsed="0.000740"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-18T19:51:14.182765" elapsed="0.050065"/>
+<status status="PASS" start="2025-04-13T18:56:19.024223" elapsed="0.001632"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T19:51:17.233929" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T19:51:14.233368" elapsed="3.000789"/>
+<kw name="QUANDO EU PASSAR OS PARAMETROS INVALIDOS" owner="api_marvel">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:56:19.027449" level="INFO">Creating Session using : alias=marvel, url=http://gateway.marvel.com/v1/public, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>marvel</arg>
+<arg>${url_marvel}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-13T18:56:19.027096" elapsed="0.000703"/>
 </kw>
-<status status="PASS" start="2025-03-18T19:51:07.162527" elapsed="10.071876"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-13T18:56:19.028471" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-13T18:56:19.028092" elapsed="0.000431"/>
 </kw>
-<kw name="Quando eu inserir um e-mail" owner="front_hotmail">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="usernameInput"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-18T19:51:17.235563" elapsed="0.047769"/>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:56:27.403286" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46031F5C0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:36.011329" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46032FE30&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:44.822447" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A4604309E0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:53.247339" level="FAIL">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460430D10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<var>${resposta}</var>
+<arg>marvel</arg>
+<arg>/characters</arg>
+<arg>params=apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-04-13T18:56:19.028820" elapsed="34.242355">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460430D10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:17.284051" level="INFO">Typing text 'almeida.ae@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
-<arg>xpath=//*[@id="usernameInput"]</arg>
-<arg>${EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:17.283655" elapsed="0.280396"/>
+<kw name="Log" owner="BuiltIn">
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-04-13T18:56:53.271905" elapsed="0.000104"/>
 </kw>
-<status status="PASS" start="2025-03-18T19:51:17.234973" elapsed="0.329377"/>
+<kw name="Set Test Variable" owner="BuiltIn">
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" start="2025-04-13T18:56:53.272456" elapsed="0.000086"/>
 </kw>
-<kw name="Quando eu clicar em avançar" owner="front_hotmail">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:17.566719" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Avançar')]'.</msg>
-<arg>xpath=//button[contains(text(), 'Avançar')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:17.565971" elapsed="0.156739"/>
+<status status="FAIL" start="2025-04-13T18:56:19.026459" elapsed="34.246547">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460430D10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T19:51:20.723846" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T19:51:17.722964" elapsed="3.001242"/>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_marvel">
+<arg>401</arg>
+<status status="NOT RUN" start="2025-04-13T18:56:53.274238" elapsed="0.000128"/>
 </kw>
-<status status="PASS" start="2025-03-18T19:51:17.565101" elapsed="3.159520"/>
-</kw>
-<kw name="Então deve retornar uma mensagem" owner="front_hotmail">
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:20.811818" level="INFO">${mensagem} = almeida.ae@outlook.com já é uma conta Microsoft. Tente outro nome ou reivindique um destes que está disponível. Se for seu, entre agora.</msg>
-<var>${mensagem}</var>
-<arg>xpath=//div[contains(text(), '${mensagem_retorno}')]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:20.727157" elapsed="0.084728"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-18T19:51:20.812115" elapsed="2.236886"/>
-</kw>
-<arg>já é uma conta Microsoft</arg>
-<status status="PASS" start="2025-03-18T19:51:20.725914" elapsed="2.323531"/>
-</kw>
-<status status="PASS" start="2025-03-18T19:51:07.160366" elapsed="15.890306"/>
+<status status="FAIL" start="2025-04-13T18:56:19.022065" elapsed="34.253408">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460430D10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </test>
-<test id="s1-t3" name="QUANDO EU INSERIR UMA SENHA USANDO SOMENTE NÚMEROS" line="21">
-<kw name="Acessar o site" owner="front_hotmail">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:23.059622" level="INFO">Opening browser 'edge' to base url 'http://signup.live.com'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=${BROWSER}</arg>
-<arg>options=add_experimental_option("detach", True)</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-18T19:51:23.058493" elapsed="4.099370"/>
+<test id="s1-t3" name="CONSULTAR API CHARACTERS SEM USER KEY" line="17">
+<kw name="DADO QUE EU CONSULTE O ENDPOINT" owner="api_marvel">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:56:53.285665" level="INFO">Creating Session using : alias=marvel, url=http://gateway.marvel.com/v1/public, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>marvel</arg>
+<arg>${url_marvel}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-13T18:56:53.284842" elapsed="0.001807"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-18T19:51:27.158272" elapsed="0.086040"/>
+<status status="PASS" start="2025-04-13T18:56:53.283706" elapsed="0.003459"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T19:51:30.245449" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T19:51:27.244659" elapsed="3.000944"/>
+<kw name="QUANDO EU PASSAR PARAMETROS SEM USER KEY" owner="api_marvel">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:56:53.290609" level="INFO">Creating Session using : alias=marvel, url=http://gateway.marvel.com/v1/public, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>marvel</arg>
+<arg>${url_marvel}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-13T18:56:53.290038" elapsed="0.001069"/>
 </kw>
-<status status="PASS" start="2025-03-18T19:51:23.057256" elapsed="7.188513"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-13T18:56:53.291906" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-13T18:56:53.291457" elapsed="0.000522"/>
 </kw>
-<kw name="Quando eu inserir um e-mail" owner="front_hotmail">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="usernameInput"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-18T19:51:30.246839" elapsed="0.045614"/>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:57:01.688622" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460431BF0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:10.310822" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460432140&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:19.069244" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460432470&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:27.508392" level="FAIL">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A4604327A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<var>${resposta}</var>
+<arg>marvel</arg>
+<arg>/characters</arg>
+<arg>params=hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-04-13T18:56:53.292445" elapsed="34.243426">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A4604327A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:30.293265" level="INFO">Typing text 'almeida.ae@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
-<arg>xpath=//*[@id="usernameInput"]</arg>
-<arg>${EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:30.292886" elapsed="0.316868"/>
+<kw name="Log" owner="BuiltIn">
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-04-13T18:57:27.536459" elapsed="0.000059"/>
 </kw>
-<status status="PASS" start="2025-03-18T19:51:30.246386" elapsed="0.363544"/>
+<kw name="Set Test Variable" owner="BuiltIn">
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" start="2025-04-13T18:57:27.536761" elapsed="0.000045"/>
 </kw>
-<kw name="Quando eu inserir uma senha numérica" owner="front_hotmail">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:30.611519" level="INFO">Clicking element 'xpath=//*[@id="easiSwitch"]'.</msg>
-<arg>xpath=//*[@id="easiSwitch"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:30.611133" elapsed="0.152711"/>
+<status status="FAIL" start="2025-04-13T18:56:53.288679" elapsed="34.248369">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A4604327A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:30.764941" level="INFO">Typing text 'vugo_broquinha@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
-<arg>xpath=//*[@id="usernameInput"]</arg>
-<arg>${EMAIL2}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:30.764380" elapsed="0.380031"/>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_marvel">
+<arg>409</arg>
+<status status="NOT RUN" start="2025-04-13T18:57:27.537765" elapsed="0.000101"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:31.145266" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Avançar')]'.</msg>
-<arg>xpath=//button[contains(text(), 'Avançar')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:31.144829" elapsed="0.172346"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="Password"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-18T19:51:31.317583" elapsed="0.994398"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:32.312942" level="INFO">Typing text '123456' into text field 'xpath=//*[@id="Password"]'.</msg>
-<arg>xpath=//*[@id="Password"]</arg>
-<arg>${SENHA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:32.312394" elapsed="0.173764"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T19:51:35.487632" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T19:51:32.486536" elapsed="3.001458"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:35.489347" level="INFO">Clicking element '//*[@id="nextButton"]'.</msg>
-<arg>//*[@id="nextButton"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:35.488634" elapsed="0.135341"/>
-</kw>
-<status status="PASS" start="2025-03-18T19:51:30.610560" elapsed="5.013586"/>
-</kw>
-<kw name="Então deve retornar uma mensagem" owner="front_hotmail">
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:35.991290" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-03-18T19:51:35.991637" level="FAIL">Element with locator 'xpath=//div[contains(text(), 'As senhas devem ter, no mínimo, 8 carateres e conter, pelo menos, dois dos seguintes elementos: letras maiúsculas e minúsculas, números e símbolos')]' not found.</msg>
-<var>${mensagem}</var>
-<arg>xpath=//div[contains(text(), '${mensagem_retorno}')]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-03-18T19:51:35.625645" elapsed="0.370068">Element with locator 'xpath=//div[contains(text(), 'As senhas devem ter, no mínimo, 8 carateres e conter, pelo menos, dois dos seguintes elementos: letras maiúsculas e minúsculas, números e símbolos')]' not found.</status>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-03-18T19:51:35.996000" elapsed="0.000052"/>
-</kw>
-<arg>As senhas devem ter, no mínimo, 8 carateres e conter, pelo menos, dois dos seguintes elementos: letras maiúsculas e minúsculas, números e símbolos</arg>
-<status status="FAIL" start="2025-03-18T19:51:35.624876" elapsed="0.371375">Element with locator 'xpath=//div[contains(text(), 'As senhas devem ter, no mínimo, 8 carateres e conter, pelo menos, dois dos seguintes elementos: letras maiúsculas e minúsculas, números e símbolos')]' not found.</status>
-</kw>
-<status status="FAIL" start="2025-03-18T19:51:23.054514" elapsed="12.942255">Element with locator 'xpath=//div[contains(text(), 'As senhas devem ter, no mínimo, 8 carateres e conter, pelo menos, dois dos seguintes elementos: letras maiúsculas e minúsculas, números e símbolos')]' not found.</status>
+<status status="FAIL" start="2025-04-13T18:56:53.281598" elapsed="34.256842">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A4604327A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </test>
-<test id="s1-t4" name="QUANDO EU INSERIR UMA SENHA VALIDA" line="27">
-<kw name="Acessar o site" owner="front_hotmail">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:35.999949" level="INFO">Opening browser 'edge' to base url 'http://signup.live.com'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=${BROWSER}</arg>
-<arg>options=add_experimental_option("detach", True)</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-18T19:51:35.999543" elapsed="5.386668"/>
+<test id="s1-t4" name="CONSULTAR API CHARACTERS COM HASH - VALIDO" line="22">
+<kw name="DADO QUE EU CONSULTE O ENDPOINT" owner="api_marvel">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:57:27.543251" level="INFO">Creating Session using : alias=marvel, url=http://gateway.marvel.com/v1/public, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>marvel</arg>
+<arg>${url_marvel}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-13T18:57:27.542949" elapsed="0.000615"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-18T19:51:41.386493" elapsed="0.043658"/>
+<status status="PASS" start="2025-04-13T18:57:27.542435" elapsed="0.001294"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T19:51:44.431027" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T19:51:41.430393" elapsed="3.000782"/>
+<kw name="QUANDO EU PASSAR PARAMETROS COM HASH VALIDO" owner="api_marvel">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-13T18:57:27.545131" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-13T18:57:27.544776" elapsed="0.000416"/>
 </kw>
-<status status="PASS" start="2025-03-18T19:51:35.999098" elapsed="8.432237"/>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:57:35.967745" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460433240&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:44.886237" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460433570&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:53.701329" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A4604338A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:58:02.138066" level="FAIL">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46030F460&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<var>${resposta}</var>
+<arg>marvel</arg>
+<arg>/characters</arg>
+<arg>params=apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-04-13T18:57:27.545423" elapsed="34.616227">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46030F460&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </kw>
-<kw name="Quando eu inserir um e-mail" owner="front_hotmail">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="usernameInput"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-18T19:51:44.432495" elapsed="0.047054"/>
+<kw name="Log" owner="BuiltIn">
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-04-13T18:58:02.162368" elapsed="0.000099"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:44.480611" level="INFO">Typing text 'almeida.ae@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
-<arg>xpath=//*[@id="usernameInput"]</arg>
-<arg>${EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:44.480011" elapsed="0.302114"/>
+<kw name="Set Test Variable" owner="BuiltIn">
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" start="2025-04-13T18:58:02.162908" elapsed="0.000083"/>
 </kw>
-<status status="PASS" start="2025-03-18T19:51:44.431922" elapsed="0.350378"/>
+<status status="FAIL" start="2025-04-13T18:57:27.544298" elapsed="34.619129">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46030F460&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </kw>
-<kw name="Quando eu inserir uma senha válida" owner="front_hotmail">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:44.783643" level="INFO">Clicking element 'xpath=//*[@id="easiSwitch"]'.</msg>
-<arg>xpath=//*[@id="easiSwitch"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:44.783369" elapsed="0.113280"/>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_marvel">
+<arg>200</arg>
+<status status="NOT RUN" start="2025-04-13T18:58:02.164744" elapsed="0.000169"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:44.897579" level="INFO">Typing text 'vugo_broquinha@outlook.com' into text field 'xpath=//*[@id="usernameInput"]'.</msg>
-<arg>xpath=//*[@id="usernameInput"]</arg>
-<arg>${EMAIL2}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:44.897060" elapsed="0.382529"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:45.280718" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Avançar')]'.</msg>
-<arg>xpath=//button[contains(text(), 'Avançar')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:45.280208" elapsed="0.144328"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="Password"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-18T19:51:45.425458" elapsed="0.894409"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T19:51:48.321116" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T19:51:46.320148" elapsed="2.001322"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:48.322975" level="INFO">Typing text 'Meggie@bibi12' into text field 'xpath=//*[@id="Password"]'.</msg>
-<arg>xpath=//*[@id="Password"]</arg>
-<arg>${SENHA2}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:48.322093" elapsed="0.176089"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T19:51:50.499123" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T19:51:48.498435" elapsed="2.001072"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:50.500887" level="INFO">Clicking element '//*[@id="nextButton"]'.</msg>
-<arg>//*[@id="nextButton"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T19:51:50.500168" elapsed="0.159886"/>
-</kw>
-<status status="PASS" start="2025-03-18T19:51:44.782920" elapsed="5.877352"/>
-</kw>
-<kw name="Então deve retornar uma mensagem" owner="front_hotmail">
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:51:50.999554" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-03-18T19:51:50.999851" level="FAIL">Element with locator 'xpath=//div[contains(text(), 'Precisamos de um pouco mais de informações para configurar sua conta.')]' not found.</msg>
-<var>${mensagem}</var>
-<arg>xpath=//div[contains(text(), '${mensagem_retorno}')]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-03-18T19:51:50.662412" elapsed="0.339493">Element with locator 'xpath=//div[contains(text(), 'Precisamos de um pouco mais de informações para configurar sua conta.')]' not found.</status>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-03-18T19:51:51.002199" elapsed="0.000053"/>
-</kw>
-<arg>Precisamos de um pouco mais de informações para configurar sua conta.</arg>
-<status status="FAIL" start="2025-03-18T19:51:50.661470" elapsed="0.340962">Element with locator 'xpath=//div[contains(text(), 'Precisamos de um pouco mais de informações para configurar sua conta.')]' not found.</status>
-</kw>
-<status status="FAIL" start="2025-03-18T19:51:35.998398" elapsed="15.004557">Element with locator 'xpath=//div[contains(text(), 'Precisamos de um pouco mais de informações para configurar sua conta.')]' not found.</status>
+<status status="FAIL" start="2025-04-13T18:57:27.541418" elapsed="34.624577">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46030F460&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
 </test>
-<doc>teste site Amazon</doc>
-<status status="FAIL" start="2025-03-18T19:50:53.713064" elapsed="57.292128"/>
+<test id="s1-t5" name="CONSULTAR API CHARACTERS COM HASH - INVALIDO" line="28">
+<kw name="DADO QUE EU CONSULTE O ENDPOINT" owner="api_marvel">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:58:02.174074" level="INFO">Creating Session using : alias=marvel, url=http://gateway.marvel.com/v1/public, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>marvel</arg>
+<arg>${url_marvel}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-13T18:58:02.173791" elapsed="0.000522"/>
+</kw>
+<status status="PASS" start="2025-04-13T18:58:02.173269" elapsed="0.001379"/>
+</kw>
+<kw name="QUANDO EU PASSAR PARAMETROS COM HASH INVALIDO" owner="api_marvel">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-13T18:58:02.176168" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-13T18:58:02.175803" elapsed="0.000422"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:58:10.598413" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46030E7A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1</msg>
+<msg time="2025-04-13T18:58:19.238545" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46030ECF0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1</msg>
+<msg time="2025-04-13T18:58:28.036918" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46030F020&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1</msg>
+<msg time="2025-04-13T18:58:36.467662" level="FAIL">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460433020&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<var>${resposta}</var>
+<arg>marvel</arg>
+<arg>/characters</arg>
+<arg>params=apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-04-13T18:58:02.176473" elapsed="34.315283">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460433020&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-04-13T18:58:36.492481" elapsed="0.000103"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" start="2025-04-13T18:58:36.493030" elapsed="0.000086"/>
+</kw>
+<status status="FAIL" start="2025-04-13T18:58:02.175247" elapsed="34.318302">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460433020&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
+</kw>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_marvel">
+<arg>401</arg>
+<status status="NOT RUN" start="2025-04-13T18:58:36.494765" elapsed="0.000127"/>
+</kw>
+<status status="FAIL" start="2025-04-13T18:58:02.171555" elapsed="34.324411">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460433020&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
+</test>
+<test id="s1-t6" name="CONSULTAR API CHARACTERS SEM O HASH" line="33">
+<kw name="DADO QUE EU CONSULTE O ENDPOINT" owner="api_marvel">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:58:36.500874" level="INFO">Creating Session using : alias=marvel, url=http://gateway.marvel.com/v1/public, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>marvel</arg>
+<arg>${url_marvel}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-13T18:58:36.500644" elapsed="0.000447"/>
+</kw>
+<status status="PASS" start="2025-04-13T18:58:36.500243" elapsed="0.000959"/>
+</kw>
+<kw name="QUANDO EU PASSAR PARAMETROS SEM O HASH" owner="api_marvel">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-13T18:58:36.502154" level="INFO">${headers} = {'content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-13T18:58:36.501930" elapsed="0.000261"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-04-13T18:58:44.956984" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A4604327A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1</msg>
+<msg time="2025-04-13T18:58:53.662331" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460432690&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1</msg>
+<msg time="2025-04-13T18:59:02.494654" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460432250&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1</msg>
+<msg time="2025-04-13T18:59:18.260677" level="FAIL">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460431480&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<var>${resposta}</var>
+<arg>marvel</arg>
+<arg>/characters</arg>
+<arg>params=apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-04-13T18:58:36.502335" elapsed="41.782098">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460431480&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${resposta.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-04-13T18:59:18.285121" elapsed="0.000055"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<arg>${resposta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" start="2025-04-13T18:59:18.285394" elapsed="0.000041"/>
+</kw>
+<status status="FAIL" start="2025-04-13T18:58:36.501615" elapsed="41.784037">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460431480&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
+</kw>
+<kw name="ENTÃO A API DEVE RETORNAR" owner="api_marvel">
+<arg>409</arg>
+<status status="NOT RUN" start="2025-04-13T18:59:18.286303" elapsed="0.000091"/>
+</kw>
+<status status="FAIL" start="2025-04-13T18:58:36.499453" elapsed="41.787424">ConnectionError: HTTPConnectionPool(host='gateway.marvel.com', port=80): Max retries exceeded with url: /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460431480&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
+</test>
+<status status="FAIL" start="2025-04-13T18:55:43.652049" elapsed="214.637482"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="2" skip="0">All Tests</stat>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="2" skip="0" id="s1" name="Testfront Hotmail">Testfront Hotmail</stat>
+<stat pass="0" fail="6" skip="0" id="s1" name="testApi marvel">testApi marvel</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-04-13T18:55:52.871226" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460388AD0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:01.605837" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46036E710&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:10.552948" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46036E990&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:27.403286" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46031F5C0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:36.011329" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46032FE30&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:56:44.822447" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A4604309E0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:01.688622" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460431BF0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:10.310822" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460432140&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:19.069244" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460432470&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:35.967745" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460433240&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:44.886237" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460433570&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:57:53.701329" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A4604338A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b45&amp;ts=1</msg>
+<msg time="2025-04-13T18:58:10.598413" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46030E7A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1</msg>
+<msg time="2025-04-13T18:58:19.238545" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46030ECF0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1</msg>
+<msg time="2025-04-13T18:58:28.036918" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A46030F020&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;hash=b64a96ba9ce4c7f665a29d3e3cbd7b4&amp;ts=1</msg>
+<msg time="2025-04-13T18:58:44.956984" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A4604327A0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1</msg>
+<msg time="2025-04-13T18:58:53.662331" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460432690&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1</msg>
+<msg time="2025-04-13T18:59:02.494654" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001A460432250&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /v1/public/characters?apikey=54404ddf7bcb1f389cf00f7c78a83c1b&amp;ts=1</msg>
 </errors>
 </robot>
