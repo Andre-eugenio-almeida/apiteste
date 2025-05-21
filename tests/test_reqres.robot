@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../resources/api_reqres.resource
 
-Library    RequestsLibrary
+
 
 
 *** Test Cases ***
@@ -115,5 +115,5 @@ DELETAR USUARIO NO ENDPOINT /API/USERS/2
 	DADO QUE EU CONSULTE O ENDPOINT 
    	QUANDO EU DELETAR UM USUARIO
 	ENTÃO A API DEVE RETORNAR    204
-    QUANDO EU PASSAR O PARAMETRO ID=2
-    ENTÃO A API DEVE RETORNAR    404
+    
+

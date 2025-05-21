@@ -1,11 +1,13 @@
 *** Settings ***
+Library    SeleniumLibrary
 Library    RequestsLibrary
 Library    JSONLibrary
 Library    Collections
 
 *** Variables ***
 ${url_reqres}    https://reqres.in
-
+${resposta.text}
+${resposta.status_code}
 
 *** Keywords ***
 DADO QUE CONSULTE O ENDPOINT /api/users
